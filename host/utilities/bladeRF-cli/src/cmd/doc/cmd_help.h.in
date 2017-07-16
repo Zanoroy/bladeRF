@@ -494,6 +494,7 @@
   "  -------------- --------------------------------------------------------\n" \
   "       bandwidth Bandwidth settings\n" \
   "       frequency Frequency settings\n" \
+  "             agc Auto Gain Control\n" \
   "            gpio FX3 <-> FPGA GPIO state\n" \
   "        loopback Loopback settings\n" \
   "         lnagain Gain setting of the RX LNA, in dB\n" \
@@ -822,6 +823,8 @@
   "       bandwidth Bandwidth settings\n" \
   "\n" \
   "       frequency Frequency settings\n" \
+  "\n" \
+  "             agc Auto Gain Control [on/off] (requires Calibration to have been completed).\n" \
   "\n" \
   "            gpio FX3 <-> FPGA GPIO state\n" \
   "\n" \

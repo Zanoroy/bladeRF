@@ -418,7 +418,7 @@ int print_agc(struct cli_state *state, int argc, char **argv)
         state->last_lib_error = status;
         rv = CLI_RET_LIBBLADERF;
     } else {
-        printf( "   AGC: %-10s\n",
+        printf( "  AGC: %-10s\n",
                 mode == BLADERF_GAIN_MANUAL ? "Disabled" : "Enabled" );
     }
     return rv;
@@ -444,12 +444,14 @@ int set_agc(struct cli_state *state, int argc, char **argv)
     }
 
     if (rv == CLI_RET_OK) {
+	/* printf( "Set Blade Mode (%s)\n",argv[2]); */
         status = bladerf_set_gain_mode( state->dev, BLADERF_MODULE_RX, mode );
+	/* printf( "Set Blade Mode (%s)\n",argv[2]); */
         if (status < 0) {
             state->last_lib_error = status;
             rv = CLI_RET_LIBBLADERF;
         } else {
-            printf( "   AGC: %-10s\n",
+            printf( "  AGC: %-10s\n",
                     mode == BLADERF_GAIN_MANUAL ? "Disabled" : "Enabled" );
         }
     }
